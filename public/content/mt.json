@@ -1,0 +1,23 @@
+{
+  "images": [],
+  "videos": [],
+  "tags": [],
+  "popularity": 0,
+  "description": "",
+  "cover": "",
+  "background": "",
+  "sentiment": {
+    "sentiment_categories": {
+      "positive": "",
+      "negative": "",
+      "neutral": ""
+    },
+    "sentiment_keywords": ""
+  },
+  "engagement": {
+    "views": 0,
+    "likes": 0,
+    "comments": 0,
+    "shares": 0
+  }
+}
