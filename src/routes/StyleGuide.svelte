@@ -93,7 +93,7 @@
     </div>
     <div
       class="ultrafocus button color function:copyColor"
-      style="color: var(--ctp-surface0); background-color: var(--ctp-mauve)"
+      style="color: var(--ctp-surface0); background-color: var(--ctp)"
     >
       mauve
     </div>
@@ -184,6 +184,6 @@
     padding: 2rem;
     border-radius: 5px;
     background-color: rgb(180, 197, 228);
-    box-shadow: 5px 5px 5px var(--ctp-mauve);
+    box-shadow: 5px 5px 5px var(--ctp);
   }
 </style>

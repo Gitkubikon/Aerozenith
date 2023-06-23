@@ -16,6 +16,7 @@
   import StyleGuide from "./routes/StyleGuide.svelte";
   import Footer from "./components/Footer.svelte";
   import Test from "./test.svelte";
+    import Editor from "./admin/Editor.svelte";
 
   const pages = [
     { id: "Login", component: Login },
@@ -26,6 +27,8 @@
     { id: "AdminPage", component: AdminPage },
     { id: "ArticleForm", component: ArticleForm },
     { id: "StyleGuide", component: StyleGuide },
+    { id: "Editor", component: ArticleForm },
+  
   ];
 
   const getComponent = function () {
@@ -39,8 +42,8 @@
   if (getCookieValue("token")) {
     document
       .querySelector(":root")
-      .style.setProperty("--ctp-mauve", "rgb(125, 196, 228)");
-    page.set("AdminPage");
+      .style.setProperty("--ctp", "rgb(125, 196, 228)");
+    page.set("Editor");
   }
 
   let currentTry = 0;
@@ -62,7 +65,7 @@
 <main class="w-screen h-screen">
   <Top />
   <div class="flex flex-row">
-    <Side />
+    <!-- <Side /> -->
     <div id="sectionback">
       <svelte:component this={getComponent()} />
     </div>

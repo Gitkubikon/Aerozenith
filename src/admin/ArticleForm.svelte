@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Card from "./Card.svelte";
+  import Editor from "./Editor.svelte";
   import { api } from "../main";
   import { onMount } from "svelte";
   import { fade, fly } from "svelte/transition";
@@ -99,7 +99,7 @@
     </div>
   </section>
 {:else}
-  <Card {currentArticle} on:close-editor={handleCloseEditor} />
+  <Editor {currentArticle} on:close-editor={handleCloseEditor} />
 {/if}
 
 <style>

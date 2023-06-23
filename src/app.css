@@ -1,4 +1,5 @@
-@import 'catppuccin.css';
+@import 'theming.css';
+@import 'fonts.css';
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -19,6 +20,11 @@
 * {
   cursor: none !important;
 }
+
+  img,
+  video {
+    width: 100%;
+  }
 
 .test-header {
   border-radius: 4px;
@@ -126,8 +132,8 @@ p {
   transition-property: none;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-  -moz-transition-property: fill, background-color, color;
-  -o-transition-property: fill, background-color, color;
+  -moz-transition-property: fill, background, background-color, color;
+  -o-transition-property: fill, background, background-color, color;
 }
 
 
@@ -137,8 +143,8 @@ path {
   transition-property: none;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
-  -moz-transition-property: fill, background-color, color;
-  -o-transition-property: fill, background-color, color;
+  -moz-transition-property: fill, background, background-color, color;
+  -o-transition-property: fill, background, background-color, color;
   color: var(--ctp-mauve);
   background-color: var(--ctp-base);
 
@@ -198,14 +204,14 @@ button:focus-visible {
 
 #sectionback {
   right: 0px;
-  top: 52px;
+  top: 56px;
   position: fixed;
-  min-width: calc(100vw - 57px);
+  min-width: calc(100vw);
   min-height: calc(100vh - 52px);
   height: calc(100vh - 52px);
-  width: calc(100vw - 56px);
+  width: calc(100vw);
   background-color: var(--ctp-surface1);
-  border-top-left-radius: 8px;
+  /* border-top-left-radius: 8px; */
   overflow: hidden !important;
   box-shadow: inset 8px 0px 32px 0 rgba(0, 0, 0, 0.1),
     inset 6px 0 32px -16px rgba(0, 0, 0, 0.1);
@@ -214,12 +220,16 @@ button:focus-visible {
 nav {
   background-color: var(--ctp-base);
   position: fixed;
-
 }
 
 section {
   overflow: auto;
   scrollbar-width: none;
+  padding: 5rem;
+}
+
+section #carousel {
+  padding: 0; /* Remove the padding */
 }
 
 section::-webkit-scrollbar {
@@ -237,7 +247,7 @@ section {
   right: 0px;
   margin: 0 auto;
   text-align: center;
-  padding: 3rem;
+  /* padding: 3rem; */
   z-index: 802;
   height: inherit;
 }
@@ -306,10 +316,6 @@ section {
     display: block;
     margin-left: -33px;
     margin-top: 110px;
-  }
-
-  .logo {
-    display: none;
   }
 
   .mobilenavshow {

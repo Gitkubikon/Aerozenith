@@ -1,1 +1,242 @@
-{"workflow": {"test_article_2": {"images": [], "videos": [], "tags": [], "popularity": 0, "description": "", "cover": "", "background": "", "sentiment": {"sentiment_categories": {"positive": "", "negative": "", "neutral": ""}, "sentiment_keywords": ""}, "engagement": {"views": 0, "likes": 0, "comments": 0, "shares": 0}, "created_at": "2023-04-22 18:26:57", "modified_at": "2023-06-06 21:51:39"}}, "art": {"test_article": {"images": [], "videos": [], "tags": [], "popularity": 0, "description": "", "cover": "", "background": "", "sentiment": {"sentiment_categories": {"positive": "", "negative": "", "neutral": ""}, "sentiment_keywords": ""}, "engagement": {"views": 0, "likes": 0, "comments": 0, "shares": 0}, "created_at": "2023-04-22 18:25:27"}}, "science": {"test_article": {"images": [], "videos": [], "tags": [], "popularity": 0, "description": "", "cover": "", "background": "", "sentiment": {"sentiment_categories": {"positive": "", "negative": "", "neutral": ""}, "sentiment_keywords": ""}, "engagement": {"views": 0, "likes": 0, "comments": 0, "shares": 0}, "created_at": "2023-04-22 18:25:35"}}, "technology": {"test_article": {"images": [], "videos": [], "tags": [], "popularity": 0, "description": "", "cover": "", "background": "", "sentiment": {"sentiment_categories": {"positive": "", "negative": "", "neutral": ""}, "sentiment_keywords": ""}, "engagement": {"views": 0, "likes": 0, "comments": 0, "shares": 0}, "created_at": "2023-04-22 18:25:47", "modified_at": "2023-04-22 18:29:17"}, "test_article_2": {"images": [], "videos": [], "tags": [], "popularity": 0, "description": "", "cover": "", "background": "", "sentiment": {"sentiment_categories": {"positive": "", "negative": "", "neutral": ""}, "sentiment_keywords": ""}, "engagement": {"views": 0, "likes": 0, "comments": 0, "shares": 0}, "created_at": "2023-04-22 18:26:00", "modified_at": "2023-04-22 18:30:06"}}, "unindexed": {"NewFile": {"images": [], "videos": [], "tags": [], "popularity": 0, "description": "", "cover": "", "background": "", "sentiment": {"sentiment_categories": {"positive": "", "negative": "", "neutral": ""}, "sentiment_keywords": ""}, "engagement": {"views": 0, "likes": 0, "comments": 0, "shares": 0}, "created_at": "2023-04-22 18:51:20"}}}
+{
+    "AZ_001": {
+        "AZ_001_F": {
+            "images": [],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "AZ_001/AZ_001_F/cover/AZ_001_f.png",
+            "background": "AZ_001/AZ_001_F/background/Cyberpunk_white_building.png",
+            "price": "389.65$",
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 22:25:40"
+        },
+        "AZ_001_M": {
+            "images": [],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "AZ_001/AZ_001_M/cover/AZ_001_m.png",
+            "background": "AZ_001/AZ_001_M/background/Cyberpunk_white_building_inverse.png",
+            "price": "389.64$",
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 22:25:48"
+        }
+    },
+    "legal": {
+        "disclaimer": {
+            "images": [
+                "legal/disclaimer/images/yoru_ni_kakeru.jpg"
+            ],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "",
+            "background": "",
+            "price": 0,
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 16:05:51"
+        },
+        "cookies": {
+            "images": [],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "",
+            "background": "",
+            "price": 0,
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 16:05:51"
+        },
+        "accessibility": {
+            "images": [],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "",
+            "background": "",
+            "price": 0,
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 16:05:51"
+        },
+        "refund": {
+            "images": [],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "",
+            "background": "",
+            "price": 0,
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 16:05:51"
+        },
+        "shipping": {
+            "images": [],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "",
+            "background": "",
+            "price": 0,
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 16:05:51"
+        },
+        "terms": {
+            "images": [],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "",
+            "background": "",
+            "price": 0,
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 16:05:51"
+        },
+        "privacy": {
+            "images": [],
+            "videos": [],
+            "tags": [],
+            "popularity": 0,
+            "description": "",
+            "cover": "",
+            "background": "",
+            "price": 0,
+            "sentiment": {
+                "sentiment_categories": {
+                    "positive": "",
+                    "negative": "",
+                    "neutral": ""
+                },
+                "sentiment_keywords": ""
+            },
+            "engagement": {
+                "views": 0,
+                "likes": 0,
+                "comments": 0,
+                "shares": 0
+            },
+            "created_at": "2023-06-23 15:55:05",
+            "modified_at": "2023-06-23 16:05:51"
+        }
+    }
+}

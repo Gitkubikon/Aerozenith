@@ -8,7 +8,8 @@ import {
   testGetVideo,
   testGetArticleMetadata,
   testDeleteMedia,
-  testDeleteArticle
+  testDeleteArticle,
+  testReindexArticles
 } from "./testapi";
 
 var theme: string;
@@ -42,6 +43,9 @@ const functions = {
   StyleGuide: () => {
     page.set("StyleGuide")
   },
+  Login: () => {
+    page.set("Login")
+  },
   Logout: () => {
     deleteCookie("token")
     page.set("Foo")
@@ -49,14 +53,15 @@ const functions = {
   TestApi: async () => {
 
     const testFunctions = {
-      testCreateArticle,
-      testUpdateArticle,
-      testUploadMedia,
-      testGetArticle,
-      testGetVideo,
-      testGetArticleMetadata,
-      testDeleteMedia,
-      testDeleteArticle,
+      // testCreateArticle,
+      // testUpdateArticle,
+      // testUploadMedia,
+      // testGetArticle,
+      // testGetVideo,
+      // testGetArticleMetadata,
+      // testDeleteMedia,
+      // testDeleteArticle,
+      testReindexArticles,
     };
 
     const testResults = {};

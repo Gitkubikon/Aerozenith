@@ -25,12 +25,12 @@
         page.set("AdminPage");
         // Select the :root element
 
-        // Update the value of the --ctp-mauve variable
+        // Update the value of the --ctp variable
         //@ts-ignore
-        rootElement.style.setProperty("--ctp-mauve", "rgb(166, 218, 149)");
+        rootElement.style.setProperty("--ctp", "rgb(166, 218, 149)");
       } else {
         //@ts-ignore
-        rootElement.style.setProperty("--ctp-mauve", "rgb(237, 135, 150)");
+        rootElement.style.setProperty("--ctp", "rgb(237, 135, 150)");
         loginStatus = "Incorrect username or password.";
         isError = true;
       }
@@ -65,7 +65,7 @@
         <h1 class="login-title">CHAD'S CONSOLE</h1>
       {:else}
         <h1 class="login-title">CHAD'S LOGIN</h1>
-      {/if}
+     {/if}
     </div>
     {#if !isLogin}
       <input
@@ -154,8 +154,8 @@
     justify-content: center;
     height: 100vh;
     background-color: var(--ctp-base);
-    background-image: radial-gradient(var(--ctp-mauve) 1px, transparent 1px),
-      radial-gradient(var(--ctp-mauve) 1px, transparent 1px);
+    background-image: radial-gradient(var(--ctp) 1px, transparent 1px),
+      radial-gradient(var(--ctp) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: 0 0, 25px 25px;
     animation: flicker 1.5s infinite alternate;
@@ -173,7 +173,7 @@
     position: absolute;
     width: calc((100vw / 993) * 1885);
     height: calc((100vw / 900) * 1760);
-    background-color: var(--ctp-mauve);
+    background-color: var(--ctp);
     animation-duration: 0.9s;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
@@ -248,7 +248,7 @@
     padding: 2rem;
     border-radius: 5px;
     background-color: var(--ctp-mantle);
-    box-shadow: 5px 5px 5px var(--ctp-mauve);
+    box-shadow: 5px 5px 5px var(--ctp);
     animation: flicker 1.5s infinite alternate;
   }
 
@@ -262,8 +262,8 @@
     56%,
     100% {
       box-shadow: 0 0 0.1rem #fff, inset 0 0 0rem #fff,
-        0 0 0.5rem var(--ctp-mauve), inset 0 0 0.5rem var(--ctp-mauve),
-        0 0 1rem var(--ctp-mauve), inset 0 0 1rem var(--ctp-mauve);
+        0 0 0.5rem var(--ctp), inset 0 0 0.5rem var(--ctp),
+        0 0 1rem var(--ctp), inset 0 0 1rem var(--ctp);
     }
 
     20%,
@@ -277,7 +277,7 @@
   .login-title {
     font-size: 2rem;
     font-weight: bold;
-    color: var(--ctp-mauve);
+    color: var(--ctp);
     margin-bottom: 2rem;
     text-align: center;
   }
@@ -286,13 +286,13 @@
     width: 85%;
     padding: 0.75rem;
     margin-bottom: 1rem;
-    border: 2px solid var(--ctp-mauve);
+    border: 2px solid var(--ctp);
     border-radius: 5px;
   }
 
   .login-button {
     padding: 0.75rem;
-    background-color: var(--ctp-mauve);
+    background-color: var(--ctp);
     color: var(--ctp-base);
     font-weight: bold;
     text-transform: uppercase;

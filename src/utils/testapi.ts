@@ -29,7 +29,7 @@ export async function testUploadMedia() {
 
 export async function testGetVideo() {
   try {
-    const media = await api.getMedia("workflow", "test_article", "videos", "video.heif");
+    const media = await api.getMedia("workflow/test_article/videos/video.heif");
     return { success: true, data: media,  name: "GET Media" };
   } catch (error) {
     console.log(error)
@@ -57,7 +57,7 @@ export async function testGetArticleMetadata() {
 
 export async function testDeleteMedia() {
   try {
-    const response = await api.deleteMedia("workflow", "test_article", "videos", "video.heif");
+    const response = await api.deleteMedia("workflow/test_article/videos/video.heif");
     return { success: true, data: response, name: "DELETE Media" };
   } catch (error) {
     return { success: false, error: error, name: "DELETE Media" };
@@ -72,3 +72,13 @@ export async function testDeleteArticle() {
     return { success: false, error: error, name: "DELETE Article" };
   }
 }
+
+export async function testReindexArticles() {
+  try {
+    const response = await api.reindexArticles();
+    return { success: true, data: response, name: "REINDEX Articles" };
+  } catch (error) {
+    return { success: false, error: error, name: "REINDEX Articles" };
+  }
+}
+

@@ -1,0 +1,53 @@
+:root.light {
+    --ctp: rgb(220, 225, 230);
+    --ctp-text: rgb(190, 195, 200);
+    --ctp-subtext1: rgb(190, 195, 200);
+    --ctp-subtext0: rgb(170, 175, 180);
+    --ctp-overlay2: rgb(90, 95, 100);
+    --ctp-overlay1: rgb(70, 75, 80);
+    --ctp-overlay0: rgb(50, 55, 60);
+    --ctp-surface2: rgb(40, 45, 50);
+    --ctp-surface1: rgb(30, 35, 40);
+    --ctp-surface0: rgb(20, 25, 30);
+    --ctp-base: rgb(10, 15, 20);
+    --ctp-mantle: rgb(5, 10, 15);
+    --ctp-crust: rgb(0, 5, 10);
+    --ctp-highlight: rgb(0, 255, 153); /* A futuristic, bright green as highlight color */
+}
+
+:root,
+:root.dark {
+    --ctp: rgb(50, 55, 60);
+    --ctp-text: rgb(70, 75, 80);
+    --ctp-subtext1: rgb(70, 75, 80);
+    --ctp-subtext0: rgb(90, 95, 100);
+    --ctp-overlay2: rgb(110, 115, 120);
+    --ctp-overlay1: rgb(130, 135, 140);
+    --ctp-overlay0: rgb(150, 155, 160);
+    --ctp-surface2: rgb(170, 175, 180);
+    --ctp-surface1: rgb(190, 195, 200);
+    --ctp-surface0: rgb(210, 215, 220);
+    --ctp-base: rgb(230, 235, 240);
+    --ctp-mantle: rgb(245, 247, 250);
+    --ctp-crust: rgb(255, 255, 255);
+    --ctp-highlight: rgb(0, 200, 120); /* A slightly muted green for light theme */
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+    --ctp: rgb(220, 225, 230);
+    --ctp-text: rgb(190, 195, 200);
+    --ctp-subtext1: rgb(190, 195, 200);
+    --ctp-subtext0: rgb(170, 175, 180);
+    --ctp-overlay2: rgb(90, 95, 100);
+    --ctp-overlay1: rgb(70, 75, 80);
+    --ctp-overlay0: rgb(50, 55, 60);
+    --ctp-surface2: rgb(40, 45, 50);
+    --ctp-surface1: rgb(30, 35, 40);
+    --ctp-surface0: rgb(20, 25, 30);
+    --ctp-base: rgb(10, 15, 20);
+    --ctp-mantle: rgb(5, 10, 15);
+    --ctp-crust: rgb(0, 5, 10);
+    --ctp-highlight: rgb(0, 255, 153); /* A futuristic, bright green as highlight color */
+    }
+}

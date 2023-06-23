@@ -219,7 +219,7 @@
   #trailer {
     overflow: none !important;
     display: block;
-    border: 2px solid var(--ctp-mauve);
+    border: 2px solid var(--ctp);
     background-color: var(--ctp-base);
     height: 10px;
     width: 10px;

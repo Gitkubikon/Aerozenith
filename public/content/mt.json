@@ -6,6 +6,7 @@
   "description": "",
   "cover": "",
   "background": "",
+  "price": 0,
   "sentiment": {
     "sentiment_categories": {
       "positive": "",

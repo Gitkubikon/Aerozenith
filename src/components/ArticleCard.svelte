@@ -1,7 +1,7 @@
 <script>
   import { api } from "../main";
   import { content, page } from "../store";
-  import { onUltraMount } from "../utils/shenanigans";
+  import { afterUpdate } from "svelte";
 
   export let upload_date = "";
   export let name = "";
@@ -11,10 +11,13 @@
   export let main_tag = "";
   export let likes = "";
   export let bgSrc = "";
+  export let price = 0;
   let card__image;
 
-  onUltraMount(() => {
-    card__image.style.background = `${bgSrc}`;
+  afterUpdate(() => {
+    if (card__image && bgSrc) {
+      card__image.style.backgroundImage = `url(${bgSrc})`;
+    }
   });
 </script>
 
@@ -22,31 +25,23 @@
   on:keydown={() => {}}
   on:click={async () => {
     content.set(await api.getArticle(main_tag, name));
-    page.set("Article")
+    page.set("Article");
   }}
   class="card"
 >
   <div bind:this={card__image} class="card__image">
-    <img src={imgSrc} alt={imgSrc} />
+    <img src={imgSrc} alt="Loading Gear ..." />
   </div>
-  <div class="card__upload_date">{upload_date}</div>
-  <div class="card__unit-name">{name}</div>
-  <div class="card__unit-description">{description}</div>
-
-  <div class="card__unit-stats clearfix">
-    <div class="one-third">
-      <div class="stat">{dislikes}<sup>S</sup></div>
-      <div class="stat-value">dislikes</div>
-    </div>
-
-    <div class="one-third">
-      <div class="stat">{main_tag}</div>
-      <div class="stat-value">main_tag</div>
-    </div>
-
-    <div class="one-third no-border">
-      <div class="stat">{likes}</div>
-      <div class="stat-value">likes</div>
+  <div class="card__metadata">
+    <!-- <div class="card__upload_date">{upload_date}</div> -->
+    <div class="card__unit-name">{name}</div>
+    <!-- <div class="card__unit-description">{description}</div> -->
+    <div class="card__unit-description">{main_tag}</div>
+    <div class="card__unit-stats clearfix">
+      <div class="stat">
+        <div class="stat-label">{price}</div>
+        <div class="stat-label-tag">Price</div>
+      </div>
     </div>
   </div>
 </div>
@@ -62,12 +57,13 @@
     background: var(--ctp-base);
     width: 300px;
     display: inline-block;
-    margin: 25px;
+    margin: 12px;
     border-radius: 19px;
     position: relative;
     text-align: center;
     box-shadow: -1px 15px 30px -12px black;
     z-index: 9999;
+    transition: transform 0.2s ease-in-out;
   }
 
   .card:hover {
@@ -77,30 +73,76 @@
   .card__image {
     position: relative;
     height: 230px;
-    margin-bottom: 35px;
     border-top-left-radius: 14px;
     border-top-right-radius: 14px;
-  }
-
-  .card__image {
-    /* background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/barbarian-bg.jpg"); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 120% 110%;
+    box-shadow: inset -1px 5px 50px 20px var(--ctp-base);
   }
 
   .card__image img {
-    width: 400px;
+    width: 48%;
     position: absolute;
-    top: -65px;
-    left: -70px;
+    top: -78px;
+    left: 75px;
+  }
+
+  img:-moz-loading {
+    width: 48%;
+    height: 40px;
+    position: absolute;
+    top: 125px;
+    left: 80px;
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--ctp-sky);
+    display: inline-block;
+    padding-right: 12px;
+    animation: type 0.5s alternate infinite;
+  }
+
+  /* img::after { */
+  /*   width: 48%; */
+  /*   height: 20px; */
+  /*   position: absolute; */
+  /*   top: 125px; */
+  /*   left: 80px; */
+  /*   font-family: "Teko", sans-serif; */
+  /*   font-size: 20px; */
+  /*   font-weight: bold; */
+  /*   color: var(--ctp-sky); */
+  /*   display: inline-block; */
+  /*   padding-right: 12px; */
+  /*   animation: type 0.5s alternate infinite; */
+  /* } */
+
+  /* .img:not([src]):not([srcset])::after, */
+  /* .img[src=""]:not([srcset])::after, */
+  /* .img:not(:-moz-loading):not([src]):not([srcset])::after, */
+  /* .img:not(:-moz-loading)[src=""]:not([srcset])::after, */
+  /* .img:-moz-broken::after { */
+  /*   display: flex; */
+  /* } */
+
+  /* @keyframes type { */
+  /*   from { */
+  /*     box-shadow: inset -3px 0px 0px #888; */
+  /*   } */
+  /*   to { */
+  /*     box-shadow: inset -3px 0px 0px transparent; */
+  /*   } */
+  /* } */
+
+  .card__metadata {
+    padding: 10px;
   }
 
   .card__upload_date {
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 700;
-    margin-bottom: 3px;
-  }
-
-  .card__upload_date {
     color: var(--ctp-teal);
   }
 
@@ -108,48 +150,62 @@
     font-size: 26px;
     color: var(--ctp-text);
     font-weight: 900;
-    margin-bottom: 5px;
   }
 
   .card__unit-description {
-    padding: 20px;
-    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   .card__unit-stats {
     background: var(--ctp-teal);
-  }
-  .card__unit-stats .one-third {
-  }
-
-  .card__unit-stats {
-    color: var(--ctp-mantle);
+    color: var(--ctp-subtext2);
     font-weight: 700;
     border-bottom-left-radius: 14px;
     border-bottom-right-radius: 14px;
   }
-  .card__unit-stats .one-third {
-    width: 33%;
-    float: left;
-    padding: 20px 15px;
+
+  .card__unit-stats .stat {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px 15px; */
   }
-  .card__unit-stats sup {
+
+  .card__unit-stats .stat-value {
+    position: relative;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .card__unit-stats .stat-value sup {
     position: absolute;
     bottom: 4px;
     font-size: 45%;
     margin-left: 2px;
   }
-  .card__unit-stats .stat {
-    position: relative;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  .card__unit-stats .stat-value {
+
+  .card__unit-stats .stat-label {
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 12px;
+    font-family: "Teko", sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: var(--ctp);
+    /* margin-top: 2rem; */
   }
-  .card__unit-stats .no-border {
+
+  .card__unit-stats .stat-label-tag {
+    text-transform: uppercase;
+    font-family: "Teko", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--ctp);
+    margin-bottom: 14px;
+    /* margin-top: 2rem; */
+  }
+
+  .card__unit-stats .stat:last-child {
     border-right: none;
   }
 

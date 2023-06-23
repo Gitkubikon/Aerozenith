@@ -20,12 +20,11 @@ export const api = new API(`${window.location.protocol}//${window.location.hostn
 // getPopularHackerNewsPosts().then((posts) => {
 //   console.log('Top Hacker-News posts:', posts);
 // });
-
+//
+//export async function testUploadMedia() {
 
 const app = new App({
   target: document.getElementById('app'),
-
-
 })
 
 export default app
